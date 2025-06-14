@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>購物 App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 首頁 -->
+  <div class="screen active" id="screen1">
+    <div class="logo-group">
+      <img src="images/shopping_center_logo.png" alt="logo" width="700" />
+      <img src="images/cat_logo.png" alt="貓咪" width="300" />
+      <button onclick="goToScreen('screen2')">開始選購</button>
+    </div>
+  </div>
+
+  <!-- screen2：商品介紹頁 -->
+  <div class="screen" id="screen2">
+    <!-- 商品頁進場 popup -->
+    <div class="intro-popup" id="introPopup">
+     <div class="popup-box" onclick="goToScreen3()">
+
+        <h3>SHOPPING CENTER</h3>
+        <p>有市面上最便宜最優質的服飾任您選擇</p>
+        <p><strong>請開始選擇您的商品吧！</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- screen3：商品頁 -->
+  <div class="screen" id="screen3">
+    <div id="productArea" style="display: none;"></div>
+ <!-- 頁面上方橫幅圖（房子圖） -->
+<div class="top-banner">
+  <img src="上面房子_工作區域 1.png" alt="首頁橫幅">
+
+</div>
+
+<!-- 今日特價標題圖（貓咪） -->
+<div class="sale-header">
+  <img src="購物貓.png" alt="今日特價">
+</div>
+
+<!-- 商品區塊包一層 -->
+<div class="product-wrapper">
+  <div class="product-grid">
+
+  <div class="item">
+    <img id="jacket" src="黑色皮衣外套.png" alt="黑色外套" >
+  </div>
+  <div class="item">
+    <img id="dress" src="洋裝_工作區域 1.png" alt="洋裝">
+  </div>
+  <div class="item">
+    <img id="mardi"src="小雛菊_工作區域 1.png" alt="綠T恤" />
+  </div>
+  <div class="item">
+    <img id="denim" src="牛仔裙_工作區域 1.png" alt="黑裙" />
+  </div>
+  
+   <!-- 下方 icon 導覽圖片 -->
+<div class="bottom-nav"></div>
+  <img src="介面_工作區域 1-01.png" class="bottom-nav-img" alt="導覽圖示">
+</div>
+
+<!-- 限時特價彈出視窗 -->
+<div id="salePopup" class="popup sale-popup">
+  <img src="限時特價_工作區域 1.png" alt="限時特價" />
+</div>
+
+<!-- 黑色皮衣外套 詳情彈出視窗 -->
+<div id="coatPopup" class="popup coat-popup">
+ <img id="jacketDetail" src="00_工作區域 1.png" alt="黑色皮衣衣款詳情" />
+</div>
+
+<!-- 警告圖片 popup -->
+<div id="warningPopup" class="popup warning-popup">
+  <img src="warning.png" alt="警告圖" />
+</div>
+
+<!-- 懶懶系洋裝 詳情彈出視窗 -->
+<div id="dressPopup" class="popup dress-popup">
+  <img id="dressDetail" src="dress_工作區域 1.png" alt="洋裝詳情">
+</div>
+
+
+<!-- 洋裝警告 popup -->
+<div id="dressWarningPopup" class="popup dressWarning-popup">
+  <img src="warning.png" alt="警告圖">
+</div>
+
+<!-- 綠T 詳情彈出視窗 -->
+<div id="mardiPopup" class="popup mardi-popup">
+  <img id="mardiDetail" src="mardi.png" alt="綠T詳情" />
+</div>
+
+<!-- 綠T 警告彈窗（起始用） -->
+<div id="mardiWarningPopup" class="popup mardiWarning-popup">
+  <img src="warning.png" alt="警告圖" />
+</div>
+
+<!-- 黑裙 詳情彈出視窗 -->
+<div id="denimPopup" class="popup denim-popup">
+  <img id="denimDetail" src="denim.png" alt="黑裙詳情" />
+</div>
+
+<!-- 黑裙 警告彈窗（起始用） -->
+<div id="denimWarningPopup" class="popup denimWarning-popup">
+  <img src="warning.png" alt="警告圖" />
+</div>
+
+  <script src="script.js"></script>
+</body>
